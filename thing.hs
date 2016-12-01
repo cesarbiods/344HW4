@@ -1,2 +1,3 @@
-main :: IO ()
-main = putStrLn "Hello World"
+irepeat :: (a -> a) -> a -> a
+irepeat f x = f(f(f(x)))
+
