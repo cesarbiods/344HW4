@@ -1,5 +1,5 @@
-irepeat :: (a -> a) -> a -> a
-irepeat f x = f(f(f(x)))
+irepeat :: (a -> a) -> a -> Int -> a
+irepeat f x i = iterate f x !! i
 
 dub :: String -> String
 dub [] = [] 
