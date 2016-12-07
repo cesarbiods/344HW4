@@ -20,3 +20,12 @@ factor n
   | factors == []  = [n]
   | otherwise = factors ++ factor (n `div` (head factors))
   where factors = take 1 $ filter (\x -> (n `mod` x) == 0) [2 .. n-1]
+
+--system.random
+hit :: (Double -> Double) -> (Double, Double) -> Bool
+hit f (x, y) = y < a
+  where
+    a = f(x)
+monte :: (Real -> Real) -> (Int, Int) -> Double -> IO Double
+monte = do
+  let M = max(f(x) | x ∈ [a,b])
