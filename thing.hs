@@ -1,3 +1,5 @@
+--import System.Random
+
 irepeat :: (a -> a) -> a -> Int -> a
 irepeat f x i = iterate f x !! i
 
@@ -7,7 +9,7 @@ dub (x:xs) c
     | x == c = x:x:(dub xs c)  
     | otherwise = x:(dub xs c)
 
-replace :: [a] -> (Int, Int) -> [a] -> [a],
+replace :: [a] -> (Int, Int) -> [a] -> [a]
 replace new (lower, upper) list  = x ++ new ++ w
   where
     (x, y) = splitAt lower list
@@ -22,11 +24,14 @@ factor n
   where factors = take 1 $ filter (\x -> (n `mod` x) == 0) [2 .. n-1]
 
 --system.random
-hit :: (Double -> Double) -> (Double, Double) -> Bool
-hit f (x, y) = y < a
+under :: (Double -> Double) -> (Double, Double) -> Bool
+under f (x, y) = y < a
   where
     a = f(x)
 
---monte :: (Real -> Real) -> (Int, Int) -> Double -> IO Double
---monte = do
+monte :: (Real -> Real) -> (Int, Int) -> Double -> IO Double
+monte = do
+  let i = 5 :: Int
+  r <- random :: IO Int
+  print (i + r)
   --let M = max(f(x) | x ∈ [a,b])
