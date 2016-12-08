@@ -1,13 +1,13 @@
 irepeat :: (a -> a) -> a -> Int -> a
 irepeat f x i = iterate f x !! i
 
-dub :: String -> String
-dub [] = [] 
-dub (x:xs)   
-    | x == 'a' = x:x:(dub xs)  
-    | otherwise = x:(dub xs)
+dub :: String -> Char -> String
+dub [] c = [] 
+dub (x:xs) c  
+    | x == c = x:x:(dub xs c)  
+    | otherwise = x:(dub xs c)
 
-replace :: [a] -> (Int, Int) -> [a] -> [a]
+replace :: [a] -> (Int, Int) -> [a] -> [a],
 replace new (lower, upper) list  = x ++ new ++ w
   where
     (x, y) = splitAt lower list
@@ -26,6 +26,7 @@ hit :: (Double -> Double) -> (Double, Double) -> Bool
 hit f (x, y) = y < a
   where
     a = f(x)
-monte :: (Real -> Real) -> (Int, Int) -> Double -> IO Double
-monte = do
-  let M = max(f(x) | x ∈ [a,b])
+
+--monte :: (Real -> Real) -> (Int, Int) -> Double -> IO Double
+--monte = do
+  --let M = max(f(x) | x ∈ [a,b])
