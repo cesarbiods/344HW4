@@ -1,3 +1,5 @@
+Script started on Fri 09 Dec 2016 09:08:11 PM EST
+[4mpi[24m:[1m~[0m> cat thing.hs
 --import System.Random
 
 irepeat :: (a -> a) -> a -> Int -> a
@@ -44,4 +46,38 @@ under f (x, y) = y < a
 --monte = do
   --let i = 5 :: Double
   --r <- random :: IO Double
-  --let M = max(f(x) | x ∈ [a,b])
+  --let M = max(f(x) | x ∈ [a,b])[4mpi[24m:[1m~[0m> h[Kghci
+GHCi, version 7.10.3: http://www.haskell.org/ghc/  :? for help
+[?1h=Prelude> :load thing.hs
+[?1l>[1 of 1] Compiling Main             ( thing.hs, interpreted )
+Ok, modules loaded: Main.
+[?1h=*Main> irepeat (+1) 3 0
+[?1l>3
+[?1h=*Main> irepeat (+1) 3 0[K6
+[?1l>9
+[?1h=*Main> irepeat (+1) 3 6\[K[K[K[K[K[K[K+"[K"!") "yes" 4
+[?1l>"yes!!!!"
+[?1h=*Main> dub "hi" 'i'
+[?1l>"hii"
+[?1h=*Main> dub "hi" 'i'[K[K[K[K[K[Kch[K[K[Kcharactor[K[Ker" 'a'
+[?1l>"chaaraacter"
+[?1h=*Main> dub "the cat in the hat has a fat head" 'a'
+[?1l>"the caat in the haat haas aa faat heaad"
+[?1h=*Main> replace [1,2,3] (4,5) [100,200,300,400,500,600,700]
+[?1l>[100,200,300,400,1,2,3,700]
+[?1h=*Main> replace [1,2,3] (2,5) [1,2,3,4,5,6,7,8]
+[?1l>[1,2,1,2,3,7,8]
+[?1h=*Main> replace [8] (2,3) [10,20,30,40,50,60]
+[?1l>[10,20,8,50,60]
+[?1h=*Main> factor 12
+[?1l>[2,2,3]
+[?1h=*Main> factor 50
+[?1l>[2,5,5]
+[?1h=*Main> factor 70[K2
+[?1l>[2,2,2,3,3]
+[?1h=*Main> :quit
+[?1l>Leaving GHCi.
+[4mpi[24m:[1m~[0m> exit
+exit
+
+Script done on Fri 09 Dec 2016 09:20:47 PM EST
